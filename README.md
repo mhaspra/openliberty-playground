@@ -1,0 +1,1 @@
+# Application to play around with openliberty
