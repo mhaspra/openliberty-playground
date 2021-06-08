@@ -1,13 +1,12 @@
 # Application to play around with openliberty
 ## Startup dev mode
 ```zsh
-openliberty-playground % mvn clean install
-openliberty-playground % cd openliberty
-openliberty-playground % mvn liberty:dev
+mvn clean install
+cd openliberty
+mvn liberty:dev
 ```
-## Startup dev mode
+## Startup docker
 ```zsh
-openliberty-playground % mvn clean install
-openliberty-playground % cd openliberty
-openliberty-playground % mvn liberty:dev
+docker build -t openliberty-getting-started:1.0-SNAPSHOT .
+docker run -d --name openliberty-playground -p 9080:9080 openliberty-playground:1.0-SNAPSHOT
 ```
