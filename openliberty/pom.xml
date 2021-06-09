@@ -40,6 +40,28 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>liberty-dev</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.openliberty.tools</groupId>
+                        <artifactId>liberty-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>liberty-dev</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>dev</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
     <build>
         <plugins>
             <plugin>
